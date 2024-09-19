@@ -49,8 +49,8 @@ test('Render all team members.', () => {
         const positionText = `Position: ${member.position}`;
         expect(screen.getByText(positionText)).toBeInTheDocument();
 
-        // const genderText = `Geschlecht: ${member.gender}`;
-        // expect(screen.getAllByText(genderText));
+        const genderText = `Geschlecht: ${member.gender}`;
+        expect(screen.getAllByText(genderText));
     });
 
 });
