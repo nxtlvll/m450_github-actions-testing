@@ -40,8 +40,8 @@ test('Render all team members.', () => {
     ];
 
     teamMembers.forEach(member => {
-        // const fullName = `Vorname: ${member.firstname} Nachname: ${member.lastname}`;
-        // expect(screen.getByText(fullName)).toBeInTheDocument();
+        const fullName = `Vorname: ${member.firstname} Nachname: ${member.lastname}`;
+        expect(screen.getByText(fullName)).toBeInTheDocument();
 
         const ageText = `Alter: ${member.age}`;
         expect(screen.getByText(ageText)).toBeInTheDocument();
