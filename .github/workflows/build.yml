@@ -15,7 +15,15 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-          
+
+      - name: Save node_modules and build
+          uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: |
+            node_modules
+            .next # Falls du Next.js nutzt, andernfalls den entsprechenden Build-Ordner angeben
+
 
   tests:
     runs-on: ubuntu-22.04
